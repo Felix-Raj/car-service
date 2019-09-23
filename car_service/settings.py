@@ -127,7 +127,6 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.debug.debug',
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
-    'social_core.pipeline.debug.debug',
 )
 
 SOCIAL_AUTH_GITHUB_KEY = 'dad1fd905eff10612194'
