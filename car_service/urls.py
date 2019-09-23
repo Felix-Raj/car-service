@@ -27,5 +27,5 @@ urlpatterns = [
     path('car/', include('car.urls')),
     path('customer/', include('customer.urls')),
     path('booking/', include('booking.urls')),
-    path('home/', home, name='home')
+    path('', home, name='home')
 ]

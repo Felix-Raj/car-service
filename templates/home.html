@@ -1,6 +1,11 @@
 {% if user.is_authenticated %}
         <p class="display-4">Hello, {{ user.username }}</p>
-        <a href="{% url 'booking:booking-list' %}">Bookings</a>
+        <ul><a href="{% url 'car:manufacturer-list' %}">Manufacturer</a></ul>
+        <ul><a href="{% url 'car:carmodel-list' %}">Model</a></ul>
+        <ul><a href="{% url 'car:car-list' %}">Car</a> </ul>
+        <ul><a href="{% url 'customer:customer-list' %}">Customer</a> </ul>
+        <ul><a href="{% url 'booking:mechanic-list'%}">Mechanic</a> </ul>
+        <ul><a href="{% url 'booking:booking-list' %}">Bookings</a></ul>
 {% else %}
     <a href="{% url 'rest_framework:login' %}">LogIn</a>
 {% endif %}
