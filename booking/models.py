@@ -15,6 +15,7 @@ class Booking(models.Model):
     booking_id = models.AutoField(primary_key=True)
     mechanic = models.ForeignKey(Mechanic, on_delete=models.CASCADE)
     customer = models.ForeignKey('customer.Customer', on_delete=models.CASCADE)
+    car = models.ForeignKey('car.Car', on_delete=models.CASCADE)
     datetime_of_service = models.DateTimeField(default=timezone.now)
     payment_received = models.CharField(max_length=3, choices=[
         ('N', 'No'), ('Y', 'Yes'), ], default='N', blank=False)
