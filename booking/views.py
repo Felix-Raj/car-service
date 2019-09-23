@@ -1,3 +1,4 @@
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
 from booking import serializers
@@ -10,6 +11,8 @@ class MechanicViewSet(ModelViewSet):
 
 
 class BookingViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated, ]
+
     def get_queryset(self):
         if self.request.method == 'GET':
             return models.Booking.objects.select_related()
